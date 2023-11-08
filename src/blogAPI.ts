@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { Article } from "./types";
 
 // SSRで全ての記事データを取得する
@@ -9,7 +10,21 @@ export const getAllArticles = async (): Promise<Article[]> => {
     throw new Error("エラーが発生しました。");
   }
   // suspenseを実装するためにSSRのタイミングをあえてずらす
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1500));
   const articles = await res.json();
   return articles;
+};
+
+// 記事詳細は頻繁に更新されるわけではないのでISR(もしくはSG)
+export const getDetailArticle = async (id: string): Promise<Article> => {
+  const res = await fetch(`http://localhost:3002/posts/${id}`, { next: { revalidate: 60 } });
+  if (res.status === 404) {
+    notFound();
+  }
+  if (!res.ok) {
+    throw new Error("エラーが発生しました。");
+  }
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const article = await res.json();
+  return article;
 };
