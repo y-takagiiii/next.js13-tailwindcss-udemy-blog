@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "next.js13-udemy",
+      "title": "Next.js13をUdemyで学ぶ",
+      "content": "shincodeさんの教材でNext.js13を学んでいます。",
+      "createdAt": "2023/11/07"
+    },
+    {
+      "id": "json-server",
+      "title": "JSONサーバーを使う",
+      "content": "shincodeさんの教材でjson-serverを使っています。",
+      "createdAt": "2023/11/08"
+    }
+  ]
+}
