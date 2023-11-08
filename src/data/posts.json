@@ -11,6 +11,12 @@
       "title": "JSONサーバーを使う",
       "content": "shincodeさんの教材でjson-serverを使っています。",
       "createdAt": "2023/11/08"
+    },
+    {
+      "id": "revalidate-next.js13",
+      "title": "データの再検証",
+      "content": "Revalidation is the process of purging the Data Cache and re-fetching the latest data. This is useful when your data changes and you want to ensure you show the latest information.Cached data can be revalidated in two ways:Time-based revalidation: Automatically revalidate data after a certain amount of time has passed. This is useful for data that changes infrequently and freshness is not as critical.On-demand revalidation: Manually revalidate data based on an event (e.g. form submission). On-demand revalidation can use a tag-based or path-based approach to revalidate groups of data at once. This is useful when you want to ensure the latest data is shown as soon as possible (e.g. when content from your headless CMS is updated).",
+      "createdAt": "2023/11/08"
     }
   ]
 }
