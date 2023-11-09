@@ -17,6 +17,24 @@
       "title": "データの再検証",
       "content": "Revalidation is the process of purging the Data Cache and re-fetching the latest data. This is useful when your data changes and you want to ensure you show the latest information.Cached data can be revalidated in two ways:Time-based revalidation: Automatically revalidate data after a certain amount of time has passed. This is useful for data that changes infrequently and freshness is not as critical.On-demand revalidation: Manually revalidate data based on an event (e.g. form submission). On-demand revalidation can use a tag-based or path-based approach to revalidate groups of data at once. This is useful when you want to ensure the latest data is shown as soon as possible (e.g. when content from your headless CMS is updated).",
       "createdAt": "2023/11/08"
+    },
+    {
+      "id": "Dynamic Routes",
+      "title": "ダイナミックルーティング",
+      "content": "A Dynamic Segment can be created by wrapping a folder's name in square brackets: [folderName]. For example, [id] or [slug].\nDynamic Segments are passed as the params prop to layout, page, route, and generateMetadata functions.",
+      "createdAt": "2023-11-09T01:06:12.013Z"
+    },
+    {
+      "id": "Dynamic-Routes",
+      "title": "Dynamic Routes",
+      "content": "A Dynamic Segment can be created by wrapping a folder's name in square brackets: [folderName]. For example, [id] or [slug].Dynamic Segments are passed as the params prop to layout, page, route, and generateMetadata functions.",
+      "createdAt": "2023-11-09T01:09:06.436Z"
+    },
+    {
+      "id": "useRouter",
+      "title": "useRouter",
+      "content": "router.push(href: string, { scroll: boolean }): Perform a client-side navigation to the provided route. Adds a new entry into the browser’s history stack.router.replace(href: string, { scroll: boolean }): Perform a client-side navigation to the provided route without adding a new entry into the browser’s history stack.router.refresh(): Refresh the current route. Making a new request to the server, re-fetching data requests, and re-rendering Server Components. The client will merge the updated React Server Component payload without losing unaffected client-side React (e.g. useState) or browser state (e.g. scroll position).router.prefetch(href: string): Prefetch the provided route for faster client-side transitions.router.back(): Navigate back to the previous route in the browser’s history stack.\nrouter.forward(): Navigate forwards to the next page in the browser’s history stack.\n",
+      "createdAt": "2023-11-09T01:44:57.358Z"
     }
   ]
 }
